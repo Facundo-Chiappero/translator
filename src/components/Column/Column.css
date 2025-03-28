@@ -1,0 +1,78 @@
+.translateFrom div,
+.translateTo div {
+  display: flex;
+  flex-direction: column;
+}
+
+.translateToggler {
+  width: .3rem;
+}
+
+.textareaContainer {
+  position: relative;
+}
+
+.light textarea {
+  border: 1px solid #303034;
+  background-color: #ededf3;
+  color: #1f1f23;
+}
+
+textarea {
+  resize: none;
+  overflow: hidden;
+  min-height: 57px;
+  width: 254px;
+  padding: 1rem 3.4rem 3.4rem 1.5rem;
+  height: auto;
+  border: 1px solid #303034;
+  background-color: #1f1f23;
+  border-radius: 0 0 .4rem .4rem;
+  color: #e3e3e8;
+  font-weight: 400;
+  font-size: 1rem;
+  outline: none;
+  font-family: Inter, Helvetica, sans-serif;
+}
+
+.light textarea::placeholder {
+  color: #626265;
+}
+
+textarea::placeholder {
+  color: #909094;
+}
+
+.light #to {
+  background-color: #e3e3e8;
+}
+
+#to {
+  background-color: #1b1b1f;
+}
+
+.light select {
+  border: 1px solid #303034;
+  background-color: #ededf3;
+  color: #2f2f30;
+
+}
+
+select {
+  border: 1px solid #303034;
+  background-color: #1f1f23;
+  border-radius: .4rem .4rem 0 0;
+  height: 42px;
+  padding: 0 40px 0 24px;
+  color: #c7c7cc;
+  font-weight: 600;
+  outline: none;
+  font-family: Inter, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 385px) {
+  textarea {
+    padding: .5rem 2rem 2rem .5rem;
+    width: auto;
+  }
+}
