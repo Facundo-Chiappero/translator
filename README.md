@@ -96,6 +96,13 @@ Para ejecutar la versión de desarrollo, sigue estos pasos:
 
 Si deseas subir el proyecto a **Netlify** u otro host:
 
+1. **Clona el repositorio**:
+
+  ```bash
+    git clone https://github.com/Facundo-Chiappero/ChattinoAI.git
+    cd translator
+  ```
+
 1. **Netlify**: El proyecto está configurado específicamente para ser desplegado en **Netlify**. Las configuraciones necesarias ya están en la carpeta `functions` y el archivo `public/netlify.toml`.
     
 2. **Otros Hosts**: Si deseas usar un host diferente, asegúrate de cambiar la constante `HOST_BACKEND_URL` en `utils/constants.js` a la URL de tu backend. También revisa y modifica la carpeta `functions` y el archivo `public/netlify.toml` según lo que requiera el host.
@@ -245,11 +252,18 @@ To run the development version, follow these steps:
 
 If you want to upload the project to **Netlify** or another host:
 
-1.  **Netlify**: The project is configured specifically to be deployed on **Netlify**. The necessary configurations are already in the `functions` folder and the `public/netlify.toml` file.
+1. **Clone the repository**:
 
-2.  **Other Hosts**: If you want to use a different host, make sure to change the `HOST_BACKEND_URL` constant in `utils/constants.js` to your backend URL. Also, review and modify the `functions` folder and the `public/netlify.toml` file as required by the host.
+  ```bash
+    git clone https://github.com/Facundo-Chiappero/ChattinoAI.git
+    cd translator
+  ```
 
-3.  **Build**: You can run the following command to create the `dist` folder, whose files you will upload to the host, in the case of Netlify along with the `functions` folder and a `package.json` file, with the content indicated below:
+2.  **Netlify**: The project is configured specifically to be deployed on **Netlify**. The necessary configurations are already in the `functions` folder and the `public/netlify.toml` file.
+
+3.  **Other Hosts**: If you want to use a different host, make sure to change the `HOST_BACKEND_URL` constant in `utils/constants.js` to your backend URL. Also, review and modify the `functions` folder and the `public/netlify.toml` file as required by the host.
+
+4.  **Build**: You can run the following command to create the `dist` folder, whose files you will upload to the host, in the case of Netlify along with the `functions` folder and a `package.json` file, with the content indicated below:
 
     -   Command:
 
