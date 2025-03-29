@@ -39,7 +39,7 @@ Para ejecutar la versión de desarrollo, sigue estos pasos:
 1. **Clona el repositorio**:
 
   ```bash
-   git clone https://github.com/FacundoChiappero/translator.git
+   git clone https://github.com/Facundo-Chiappero/translator.git
    cd translator
   ```
 2. **Configura los archivos `.env`**:
@@ -179,7 +179,7 @@ To run the development version, follow these steps:
 1.  **Clone the repository**:
 
     ```bash
-    git clone https://github.com/FacundoChiappero/translator.git
+    git clone https://github.com/Facundo-Chiappero/translator.git
     cd translator
     ```
 
