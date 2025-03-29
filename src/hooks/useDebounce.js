@@ -1,4 +1,4 @@
-import { translation } from "@utils/translation";
+import { translation } from "../utils/translation";
 import { useEffect } from "react";
 
 export function useDebounce({ text, language, otherLanguage, setFromText, setResult }) {

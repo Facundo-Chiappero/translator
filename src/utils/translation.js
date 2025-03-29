@@ -1,34 +1,28 @@
-import { ERRORS, INSTRUCTIONS } from "@utils/constants";
-import { GoogleGenAI } from "@google/genai";
-
-const myApiKey = import.meta.env.VITE_API_KEY
-
-const ai = new GoogleGenAI({ apiKey: myApiKey });
+import { ERRORS, HOST_BACKEND_URL } from "@utils/constants";
 
 export async function translation(msg, languageFrom, languageTo) {
-  const msgToSend = `${msg} {{${languageFrom}}} [[${languageTo}]]`
-
+  const backendUrl = import.meta.env.VITE_BACKEND_URL || HOST_BACKEND_URL
+  alert(backendUrl)
   try {
-    const response = await ai.models.generateContent({
-      model: "gemini-2.0-flash",
-      contents: msgToSend,
-      config: {
-        systemInstruction: INSTRUCTIONS,
+    const response = await fetch(`${backendUrl}/translate`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
       },
+      body: JSON.stringify({ text: msg, languageFrom, languageTo }),
     });
-    return response.text
+
+
+    if (!response.ok) {
+      throw new Error(ERRORS.NO_RESPONSE);
+    }
+
+    const data = await response.json();
+    return data.translation;
 
   } catch (error) {
-    // get the error code
-    const errorMessage = error.message
-    const jsonStart = errorMessage.indexOf('{');
-    const errorJsonString = errorMessage.slice(jsonStart);
-    const parsedError = JSON.parse(errorJsonString)
-
-    if (parsedError.error.code == 429) {
-      alert(ERRORS[429]);
-    } else {
-      alert(ERRORS.UNEXPECTED);
-    }
+    console.error(ERRORS.TRANSLATING, error);
+    alert(ERRORS.TRY_AGAIN);
+    return null;
   }
 }
