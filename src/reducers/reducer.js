@@ -2,7 +2,7 @@ import { AUTO, LANGUAGES, TYPES } from "@utils/constants";
 
 export const initialState = {
   languageFrom: AUTO,
-  languageTo: Object.keys(LANGUAGES)[0],
+  languageTo: 'en',
   loading: false,
   fromText: '',
   result: ''
