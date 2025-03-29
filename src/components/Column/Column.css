@@ -13,7 +13,7 @@
 }
 
 .light textarea {
-  border: 1px solid #303034;
+  border: 1px solid #9595a1;
   background-color: #ededf3;
   color: #1f1f23;
 }
@@ -52,7 +52,7 @@ textarea::placeholder {
 }
 
 .light select {
-  border: 1px solid #303034;
+  border: 1px solid #9595a1;
   background-color: #ededf3;
   color: #2f2f30;
 
