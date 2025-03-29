@@ -1,4 +1,4 @@
-import { AUTO, LANGUAGES, TYPES } from "@utils/constants";
+import { AUTO, TYPES } from "@utils/constants";
 
 export const initialState = {
   languageFrom: AUTO,

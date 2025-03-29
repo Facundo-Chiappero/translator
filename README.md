@@ -10,6 +10,10 @@ Este es un proyecto que clona el funcionamiento de **Google Translate**, utiliza
 
 Este proyecto tiene un archivo de configuración para **Netlify**, lo cual facilita el despliegue en ese host específico. Si deseas usarlo en otro servicio de hosting o en local, se deben realizar algunas modificaciones:
 
+- Si tienes pensado usar el proyecto en local puedes borrar la constante `HOST_BACKEND_URL` en la linea 9 del archivo `./src/utils/translation.js`
+
+- De lo contrario si usaras el proyecto en un host debes borrar o comentar la linea 6 de dicho archivo y modificar el valor de la constante `HOST_BACKEND_URL` dentro de `./src/utils/constants.js`
+
 - La carpeta `functions` y el archivo `public/netlify.toml` están configurados para que funcione específicamente en **Netlify**. Si deseas desplegarlo en otro servicio de hosting, por favor consulta la documentación de ese servicio para hacer las configuraciones correspondientes.
   
 - Para usar el proyecto **en local**, debes agregar un archivo `.env.local` en la raíz del proyecto y colocar lo siguiente: `VITE_BACKEND_URL=http://localhost:3001`.
@@ -39,7 +43,7 @@ Para ejecutar la versión de desarrollo, sigue estos pasos:
 1. **Clona el repositorio**:
 
   ```bash
-   git clone https://github.com/FacundoChiappero/translator.git
+   git clone https://github.com/Facundo-Chiappero/translator.git
    cd translator
   ```
 2. **Configura los archivos `.env`**:
@@ -150,6 +154,10 @@ This is a project that clones the functionality of **Google Translate**, using *
 
 This project has a configuration file for **Netlify**, which facilitates deployment on that specific host. If you want to use it on another hosting service or locally, some modifications must be made:
 
+- If you plan to use the project locally, you can delete the constant `HOST_BACKEND_URL` on line 9 of the `./src/utils/translation.js` file.
+
+- Otherwise, if you will use the project on a host, you should delete or comment out line 6 of that file and modify the value of the constant `HOST_BACKEND_URL` inside `./src/utils/constants.js`.
+
 - The `functions` folder and the `public/netlify.toml` file are configured to work specifically on **Netlify**. If you want to deploy it on another hosting service, please consult the documentation of that service to make the corresponding configurations.
 
 - To use the project **locally**, you must add a `.env.local` file in the project root and place the following: `VITE_BACKEND_URL=http://localhost:3001`.
@@ -179,7 +187,7 @@ To run the development version, follow these steps:
 1.  **Clone the repository**:
 
     ```bash
-    git clone https://github.com/FacundoChiappero/translator.git
+    git clone https://github.com/Facundo-Chiappero/translator.git
     cd translator
     ```
 
